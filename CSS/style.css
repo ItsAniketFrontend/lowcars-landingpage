@@ -67,6 +67,7 @@ header .d-flex button a {
 @media (min-width: 991px) {
   .hero-banner .col-lg-6 {
     min-height: 600px;
+    padding-top: 100px;
   }
 }
 @media (max-width: 991px) {
@@ -358,7 +359,8 @@ footer {
 }
 footer a {
   text-decoration: none;
-  color: #fff;
+  color: #000;
   text-align: center;
   display: block;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */
