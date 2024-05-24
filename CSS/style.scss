@@ -63,10 +63,19 @@ header {
     background-size: cover;
 
     .col-lg-6 {
-        min-height: 600px;
+        @media (min-width:991px) {
+            min-height: 600px;    
+        }
         display: flex;
         justify-content: center;
         flex-direction: column;
+    }
+
+    .pad-top{
+        @media (max-width:991px) {
+            padding-top: 130px;
+            padding-bottom: 50px;
+        }
     }
 
     h1 {
@@ -125,6 +134,14 @@ header {
             margin-bottom: 10px;
             padding: 5px;
         }
+        select{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        textarea{
+            width: 100%;
+            padding: 5px;
+        }
         button{
             color: #fff;
         }
@@ -140,7 +157,7 @@ header {
         flex-direction: column;
     }
     .img-box{
-        background-color: #000;
+        background-color: #edf1f7;
         padding: 20px;
         border-radius: 30px;
         width: 120px;
@@ -148,6 +165,11 @@ header {
         img{
             width: 80px;
             height: 80px;
+        }
+        svg{
+            fill: #333 !important;
+            width: 85px;
+            height: 85px;
         }
     }
     h3{

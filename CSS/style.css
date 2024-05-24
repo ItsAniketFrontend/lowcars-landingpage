@@ -60,10 +60,20 @@ header .d-flex button a {
   background-size: cover;
 }
 .hero-banner .col-lg-6 {
-  min-height: 600px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+@media (min-width: 991px) {
+  .hero-banner .col-lg-6 {
+    min-height: 600px;
+  }
+}
+@media (max-width: 991px) {
+  .hero-banner .pad-top {
+    padding-top: 130px;
+    padding-bottom: 50px;
+  }
 }
 .hero-banner h1 {
   font-size: 34px;
@@ -117,6 +127,14 @@ header .d-flex button a {
   margin-bottom: 10px;
   padding: 5px;
 }
+.hero-banner .form-box select {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.hero-banner .form-box textarea {
+  width: 100%;
+  padding: 5px;
+}
 .hero-banner .form-box button {
   color: #fff;
 }
@@ -131,7 +149,7 @@ header .d-flex button a {
   flex-direction: column;
 }
 .locations .img-box {
-  background-color: #000;
+  background-color: #edf1f7;
   padding: 20px;
   border-radius: 30px;
   width: 120px;
@@ -140,6 +158,11 @@ header .d-flex button a {
 .locations .img-box img {
   width: 80px;
   height: 80px;
+}
+.locations .img-box svg {
+  fill: #333 !important;
+  width: 85px;
+  height: 85px;
 }
 .locations h3 {
   text-align: center;
