@@ -242,7 +242,7 @@ header .d-flex button a {
 }
 
 .wide-range {
-  padding-bottom: 50px;
+  padding: 50px 0px;
 }
 .wide-range h2 {
   color: #333;
