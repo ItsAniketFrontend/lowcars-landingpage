@@ -168,7 +168,7 @@ header .d-flex button a {
 }
 
 .locations {
-  padding-top: 50px;
+  padding: 50px 0px;
 }
 .locations .col-6 {
   display: flex;
@@ -242,7 +242,7 @@ header .d-flex button a {
 }
 
 .wide-range {
-  padding: 50px 0px;
+  padding-bottom: 50px;
 }
 .wide-range h2 {
   color: #333;
