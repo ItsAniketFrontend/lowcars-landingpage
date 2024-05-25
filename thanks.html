@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lowcars</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css'>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/x-icon" href="Images/logo.png">
+  </head>
+  <body>
+   
+
+    <section class="thanks">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center pt-5">
+                    <img src="Images/check-mark.png" width="54" alt="">
+                    <p>Thank You For Contacting Us Our Team will Get Back to You Soon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js'></script>
+    <script src="india.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+      
+                $('#logs').on('submit',function (e){
+                    
+                 $('#btnsubmits').html('Please wait..');
+                 $('#btnsubmits').attr('disabled',true);
+                      
+                        $.ajax({
+                          url: 'text-insert.php',
+                          type:'post',
+                         data: $('#logs').serialize(),
+                         success:  function(data){
+                               $('#btnsubmits').html('Book Your Ride');
+                               $('#btnsubmits').attr('disabled',false);
+                               $('#logs').trigger('reset');
+                               $('#table-data').fadeIn();
+                               $('#table-data').html("<h4 class='text-success text-center mb-4'>Successfully Submitted</h4>");
+                               setTimeout(function(){ $('#table-data').fadeOut(); },4000);
+                    
+                            }
+                          });
+                       e.preventDefault();
+
+                     });
+            
+       
+    </script>
+    <script>
+  $(function() {
+
+  $('.txtNumeric').keydown(function (e) {
+  
+    if (e.shiftKey || e.ctrlKey || e.altKey) {
+    
+      e.preventDefault();
+      
+    } else {
+    
+      var key = e.keyCode;
+      
+      if (!((key == 8) || (key == 32) || (key == 46) || (key >= 35 && key <= 40) || (key >= 65 && key <= 90))) {
+      
+        e.preventDefault();
+        
+      }
+
+    }
+    
+  });
+  
+});
+</script>
+ 
+<script type="text/javascript">
+         
+        jQuery(document).ready(function () {    
+ 
+            jQuery( '.numbersOnly' ).keypress(function (e) {   
+  
+                var charCode = (e.which) ? e.which : event.keyCode    
+                if (String.fromCharCode(charCode).match(/[^0-9]/g))    
+                    return false;                        
+            });    
+ 
+        });   
+  
+</script>
+
+  </body>
+</html>
